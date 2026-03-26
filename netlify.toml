@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  command = "sed -i'' -e \"s|__FIREBASE_API_KEY__|$FIREBASE_API_KEY|g\" index.html"
 
 # SPA-style routing: serve index.html for all paths
 [[redirects]]
