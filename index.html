@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roots — Private social media for the people who matter most</title>
+  <meta name="description" content="Roots is private, encrypted social media for your family and closest friends. No ads. No algorithms. No performance pressure. Just genuine connection.">
+  <meta name="theme-color" content="#00B383">
+
+  <meta property="og:title" content="Roots — Private social media for the people who matter most">
+  <meta property="og:description" content="Not a feed. Not a group chat. Not a photo dump. Roots is encrypted, ad-free social media for your family and closest friends.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" data-tab="home">
+        <img src="/assets/logo.png" alt="Roots" class="nav__logo-img">
+        <span class="nav__logo-text">roots</span>
+      </a>
+      <div class="nav__tabs">
+        <button class="nav__tab nav__tab--active" data-tab="home">Home</button>
+        <button class="nav__tab" data-tab="why">Why Roots</button>
+        <button class="nav__tab" data-tab="features">Features</button>
+        <button class="nav__tab" data-tab="privacy">Privacy</button>
+      </div>
+      <button class="nav__cta" data-tab="beta">Join the Beta</button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       TAB PANELS
+       ============================================ -->
+
+  <!-- HOME -->
+  <main class="panel panel--active" id="panel-home" style="display:block;">
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__headline anim">
+          <span class="hero__line">Not a feed.</span>
+          <span class="hero__line">Not a group chat.</span>
+          <span class="hero__line">Not a photo dump.</span>
+        </h1>
+        <p class="hero__sub anim delay-1">
+          Roots is private social media for your family and closest friends. Encrypted. Ad-free. Yours.
+        </p>
+        <form class="hero__form anim delay-2" id="hero-form">
+          <div class="form-row">
+            <input type="email" class="form-input" placeholder="your@email.com" required aria-label="Email address" id="hero-email">
+            <button type="submit" class="btn btn--primary btn--shine">Get Early Access</button>
+          </div>
+          <p class="form-note">Free beta. No spam. Unsubscribe anytime.</p>
+        </form>
+      </div>
+      <div class="hero__visual anim delay-2">
+        <div class="phone">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <div class="carousel" id="carousel">
+              <img src="/assets/screen-feed.png" alt="Roots feed" class="carousel__slide carousel__slide--active">
+              <img src="/assets/screen-family.png" alt="Roots family" class="carousel__slide">
+            </div>
+            <div class="carousel__dots">
+              <span class="carousel__dot carousel__dot--active" data-index="0"></span>
+              <span class="carousel__dot" data-index="1"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WHY ROOTS -->
+  <main class="panel" id="panel-why">
+    <div class="panel__scroll">
+      <!-- What it is -->
+      <section class="tab-section">
+        <div class="tab-section__inner">
+          <h2 class="tab-section__heading anim">Social media, designed for the<br>people who actually matter.</h2>
+          <p class="tab-section__body anim delay-1">
+            Roots is where your family and closest friends share, talk, and remember — in one private, encrypted space. No audience. No algorithm. No performance pressure.
+          </p>
+          <div class="pillars anim delay-2">
+            <div class="pillar">
+              <div class="pillar__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <h3 class="pillar__title">Private by default</h3>
+              <p class="pillar__text">Your space. Your people. Nobody else.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <h3 class="pillar__title">Genuine connection</h3>
+              <p class="pillar__text">Built for real sharing, not performance.</p>
+            </div>
+            <div class="pillar">
+              <div class="pillar__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <h3 class="pillar__title">Built to last</h3>
+              <p class="pillar__text">Not stories that vanish. Memories that stay.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why different -->
+      <section class="tab-section tab-section--tinted">
+        <div class="tab-section__inner">
+          <h2 class="tab-section__heading anim">You already know something is broken.</h2>
+          <div class="contrasts anim delay-1">
+            <div class="contrast">
+              <div class="contrast__old">Social media sells your attention.</div>
+              <div class="contrast__new">Roots protects it.</div>
+            </div>
+            <div class="contrast">
+              <div class="contrast__old">Group chats bury everything.</div>
+              <div class="contrast__new">Roots organizes it.</div>
+            </div>
+            <div class="contrast">
+              <div class="contrast__old">Photo albums sit untouched.</div>
+              <div class="contrast__new">Roots keeps you connected.</div>
+            </div>
+            <div class="contrast">
+              <div class="contrast__old">Everything everywhere, for everyone.</div>
+              <div class="contrast__new">One place, for the people who count.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FEATURES -->
+  <main class="panel" id="panel-features">
+    <div class="panel__scroll">
+      <section class="tab-section">
+        <div class="tab-section__inner">
+          <h2 class="tab-section__heading anim">What you actually get.</h2>
+          <div class="features-grid anim delay-1">
+            <div class="feature">
+              <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <h3 class="feature__title">Daily Check-ins</h3>
+              <p class="feature__text">Quick, casual, real. Stay close without the pressure of a perfect post.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+              <h3 class="feature__title">Folders</h3>
+              <p class="feature__text">Organize by what matters — trips, recipes, milestones, inside jokes. Your family's shared brain.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+              <h3 class="feature__title">Memory Prompts</h3>
+              <p class="feature__text">Resurface what you've shared. Not algorithmically — intentionally. Stories that deserve a second life.</p>
+            </div>
+            <div class="feature">
+              <div class="feature__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+              <h3 class="feature__title">Stickers & Reactions</h3>
+              <p class="feature__text">Express yourself. Not for likes — for the people who actually get it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-section">
+        <div class="tab-section__inner">
+          <h2 class="tab-section__heading anim">Everyone belongs.<br>Even if they can't log in.</h2>
+          <p class="tab-section__body anim delay-1">
+            Family isn't limited to people with smartphones. Roots lets you create profiles for the members who matter but can't post themselves — so your whole family is represented.
+          </p>
+          <div class="profiles-grid anim delay-2">
+            <div class="profile-card">
+              <div class="profile-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <h3 class="profile-card__title">Children</h3>
+              <p class="profile-card__text">Your kids are part of the family long before they're old enough for a phone. Their milestones, photos, and stories live in the family space from day one.</p>
+            </div>
+            <div class="profile-card">
+              <div class="profile-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-1.5 0-5-2.5-5-6.5 0-2.5 1.5-4.5 3-5.5C11 8.3 12 7 12 5c0 2 1 3.3 2 4 1.5 1 3 3 3 5.5 0 4-3.5 6.5-5 6.5z"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="8" r="1.5"/><circle cx="5.5" cy="12" r="1.5"/><circle cx="18.5" cy="12" r="1.5"/></svg></div>
+              <h3 class="profile-card__title">Pets</h3>
+              <p class="profile-card__text">They're family too. Give them a profile so every photo, vet visit, and ridiculous moment has a home.</p>
+            </div>
+            <div class="profile-card">
+              <div class="profile-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <h3 class="profile-card__title">Loved ones you've lost</h3>
+              <p class="profile-card__text">Some people shaped your family forever. Memorial profiles let their photos, stories, and memory live on — shared, not forgotten.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- PRIVACY -->
+  <main class="panel" id="panel-privacy">
+    <div class="panel__scroll">
+      <section class="tab-section tab-section--hero">
+        <div class="tab-section__inner">
+          <p class="privacy-label anim">Our promise</p>
+          <h2 class="privacy-heading anim">Your family's moments are not ad inventory.</h2>
+          <p class="tab-section__body anim delay-1">The most personal parts of your life should not be monetized, mined, or sold. We built Roots around that belief. Everything else follows from it.</p>
+          <div class="privacy-grid anim delay-2">
+            <div class="privacy-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <div><strong>End-to-end encrypted</strong><span>Your content is encrypted before it leaves your device. We can't read it. Nobody can.</span></div>
+            </div>
+            <div class="privacy-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              <div><strong>No ads. Ever.</strong><span>We will never show you ads. Our business model is subscriptions, not surveillance.</span></div>
+            </div>
+            <div class="privacy-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="13" x2="17" y2="13"/></svg>
+              <div><strong>We never sell your data</strong><span>Your information belongs to you. We don't broker it, package it, or share it. Period.</span></div>
+            </div>
+            <div class="privacy-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              <div><strong>No tracking across apps</strong><span>We don't follow you around the internet. What you do outside Roots is none of our business.</span></div>
+            </div>
+            <div class="privacy-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <div><strong>You own your content</strong><span>Export everything, anytime. Your memories are yours. Always.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- BETA -->
+  <main class="panel" id="panel-beta">
+    <section class="tab-section tab-section--hero">
+      <div class="tab-section__inner" style="text-align:center;">
+        <h2 class="cta-heading anim">The people who matter most deserve better than a group chat.</h2>
+        <p class="tab-section__body anim delay-1">Join the beta. Be first in.</p>
+        <form class="anim delay-2" id="cta-form">
+          <div class="form-row">
+            <input type="email" class="form-input" placeholder="your@email.com" required aria-label="Email address" id="cta-email">
+            <button type="submit" class="btn btn--primary btn--shine">Get Early Access</button>
+          </div>
+          <p class="form-note">Free beta. No spam. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (visible on all tabs) -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__copy">&copy; 2026 Roots. All rights reserved.</span>
+      <span class="footer__sep">&middot;</span>
+      <a href="mailto:slohan@umich.edu" class="footer__link">Contact</a>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <div class="toast__inner">
+      <span class="toast__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      <span class="toast__text">You're on the list! We'll be in touch.</span>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyDGA-AGpMfkMlqxHb9J6T0DMfn8Z9g6eAw",
+      authDomain: "roots-site.firebaseapp.com",
+      projectId: "roots-site",
+      storageBucket: "roots-site.firebasestorage.app",
+      messagingSenderId: "239650847839",
+      appId: "1:239650847839:web:f2f43117ec59b4d3dc2fea",
+      measurementId: "G-L1NLERE4DP"
+    });
+    firebase.analytics();
+  </script>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+# SPA-style routing: serve index.html for all paths
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
