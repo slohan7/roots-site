@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roots — Private social media for the people who matter most</title>
-  <meta name="description" content="Roots is private, encrypted social media for your family and closest friends. No ads. No algorithms. No performance pressure. Just genuine connection.">
+  <title>Roots — Finally. Social media that's good for you.</title>
+  <meta name="description" content="Roots is social media that's actually good for you. Private and ad-free — built for your family and closest friends. No algorithms. No performance pressure.">
   <meta name="theme-color" content="#00B383">
 
-  <meta property="og:title" content="Roots — Private social media for the people who matter most">
-  <meta property="og:description" content="Not a feed. Not a group chat. Not a photo dump. Roots is encrypted, ad-free social media for your family and closest friends.">
+  <meta property="og:title" content="Roots — Finally. Social media that's good for you.">
+  <meta property="og:description" content="Not a feed. Not a group chat. Not a photo dump. Social media that's actually good for you — and the people you love.">
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,14 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
+  <!-- PAGE-LEVEL MOUSE EFFECTS -->
+  <div class="page-bg" id="page-bg" aria-hidden="true">
+    <div class="page-orb page-orb--1"></div>
+    <div class="page-orb page-orb--2"></div>
+    <div class="page-orb page-orb--3"></div>
+    <div class="page-glow" id="page-glow"></div>
+  </div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -43,19 +51,15 @@
   <!-- HOME -->
   <main class="panel panel--active" id="panel-home" style="display:block;">
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="orb orb--1"></div>
-        <div class="orb orb--2"></div>
-        <div class="orb orb--3"></div>
-      </div>
+      <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__content">
         <h1 class="hero__headline anim">
-          <span class="hero__line">Not a feed.</span>
-          <span class="hero__line">Not a group chat.</span>
-          <span class="hero__line">Not a photo dump.</span>
+          <span class="hero__line">Finally.</span>
+          <span class="hero__line">Social media that's</span>
+          <span class="hero__line">good for you.</span>
         </h1>
         <p class="hero__sub anim delay-1">
-          Roots is private social media for your family and closest friends. Encrypted. Ad-free. Yours.
+          Private social media for your family and closest friends. No ads. No algorithms. No performance pressure.
         </p>
         <form class="hero__form anim delay-2" id="hero-form">
           <div class="form-row">
@@ -89,9 +93,9 @@
       <!-- What it is -->
       <section class="tab-section">
         <div class="tab-section__inner">
-          <h2 class="tab-section__heading anim">Social media, designed for the<br>people who actually matter.</h2>
+          <h2 class="tab-section__heading anim">Social media that makes you<br>feel better, not worse.</h2>
           <p class="tab-section__body anim delay-1">
-            Roots is where your family and closest friends share, talk, and remember — in one private, encrypted space. No audience. No algorithm. No performance pressure.
+            Roots is where your family and closest friends share, talk, and remember — in one private space. No audience. No algorithm. No performance pressure.
           </p>
           <div class="pillars anim delay-2">
             <div class="pillar">
@@ -133,6 +137,10 @@
             <div class="contrast">
               <div class="contrast__old">Everything everywhere, for everyone.</div>
               <div class="contrast__new">One place, for the people who count.</div>
+            </div>
+            <div class="contrast">
+              <div class="contrast__old">Social media is designed to be addictive.</div>
+              <div class="contrast__new">Roots is designed to be meaningful.</div>
             </div>
           </div>
         </div>
@@ -184,7 +192,7 @@
               <p class="profile-card__text">Your kids are part of the family long before they're old enough for a phone. Their milestones, photos, and stories live in the family space from day one.</p>
             </div>
             <div class="profile-card">
-              <div class="profile-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-1.5 0-5-2.5-5-6.5 0-2.5 1.5-4.5 3-5.5C11 8.3 12 7 12 5c0 2 1 3.3 2 4 1.5 1 3 3 3 5.5 0 4-3.5 6.5-5 6.5z"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="8" r="1.5"/><circle cx="5.5" cy="12" r="1.5"/><circle cx="18.5" cy="12" r="1.5"/></svg></div>
+              <div class="profile-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7" cy="4.5" rx="2" ry="2.5"/><ellipse cx="17" cy="4.5" rx="2" ry="2.5"/><ellipse cx="3.5" cy="10" rx="2" ry="2.5"/><ellipse cx="20.5" cy="10" rx="2" ry="2.5"/><path d="M12 22c-2 0-6-3-6-7 0-3 2-5 4-6 1-.6 2-2 2-3 0 1 1 2.4 2 3 2 1 4 3 4 6 0 4-4 7-6 7z"/></svg></div>
               <h3 class="profile-card__title">Pets</h3>
               <p class="profile-card__text">They're family too. Give them a profile so every photo, vet visit, and ridiculous moment has a home.</p>
             </div>
@@ -210,7 +218,7 @@
           <div class="privacy-grid anim delay-2">
             <div class="privacy-item">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <div><strong>End-to-end encrypted</strong><span>Your content is encrypted before it leaves your device. We can't read it. Nobody can.</span></div>
+              <div><strong>Your data stays yours</strong><span>We don't read, mine, or sell your content. Your family's moments are private — full stop.</span></div>
             </div>
             <div class="privacy-item">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
@@ -238,7 +246,7 @@
   <main class="panel" id="panel-beta">
     <section class="tab-section tab-section--hero">
       <div class="tab-section__inner" style="text-align:center;">
-        <h2 class="cta-heading anim">The people who matter most deserve better than a group chat.</h2>
+        <h2 class="cta-heading anim">Your family deserves social media that's good for them.</h2>
         <p class="tab-section__body anim delay-1">Join the beta. Be first in.</p>
         <form class="anim delay-2" id="cta-form">
           <div class="form-row">

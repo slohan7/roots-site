@@ -11,9 +11,21 @@
   const navTabs = document.querySelectorAll('.nav__tab');
   let activeTab = 'home';
 
+  // --- Per-tab gradient themes ---
+  const pageBg = document.getElementById('page-bg');
+
+  function setGradientTheme(tabId) {
+    if (!pageBg) return;
+    pageBg.className = 'page-bg';
+    pageBg.classList.add('page-bg--' + tabId);
+  }
+
   function switchTab(tabId) {
     if (tabId === activeTab) return;
     activeTab = tabId;
+
+    // Update gradient theme
+    setGradientTheme(tabId);
 
     // Update nav
     navTabs.forEach((t) => {
@@ -107,6 +119,58 @@
   });
 
   if (slides.length > 1) startCarousel();
+
+  // --- Page-level mouse tracking (orbs + glow) ---
+  const pageOrbs = document.querySelectorAll('.page-orb');
+  const pageGlow = document.getElementById('page-glow');
+
+  if (pageOrbs.length && window.matchMedia('(pointer: fine)').matches) {
+    const speeds = [0.08, 0.12, 0.1];
+    let glowX = 0, glowY = 0, targetX = 0, targetY = 0;
+    let rafId = null;
+
+    function updateGlow() {
+      glowX += (targetX - glowX) * 0.15;
+      glowY += (targetY - glowY) * 0.15;
+      if (pageGlow) {
+        pageGlow.style.left = glowX + 'px';
+        pageGlow.style.top = glowY + 'px';
+      }
+      if (Math.abs(targetX - glowX) > 0.1 || Math.abs(targetY - glowY) > 0.1) {
+        rafId = requestAnimationFrame(updateGlow);
+      } else {
+        rafId = null;
+      }
+    }
+
+    document.addEventListener('mousemove', (e) => {
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const x = e.clientX / vw - 0.5;
+      const y = e.clientY / vh - 0.5;
+
+      // Orbs drift slowly
+      pageOrbs.forEach((orb, i) => {
+        const speed = speeds[i] || 0.04;
+        const moveX = x * vw * speed;
+        const moveY = y * vh * speed;
+        orb.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+
+      // Glow follows cursor tightly
+      targetX = e.clientX;
+      targetY = e.clientY;
+      if (pageGlow) pageGlow.style.opacity = '1';
+      if (!rafId) rafId = requestAnimationFrame(updateGlow);
+    });
+
+    document.addEventListener('mouseleave', () => {
+      pageOrbs.forEach((orb) => {
+        orb.style.transform = 'translate(0, 0)';
+      });
+      if (pageGlow) pageGlow.style.opacity = '0';
+    });
+  }
 
   // --- Nav scroll shadow ---
   const nav = document.getElementById('nav');
